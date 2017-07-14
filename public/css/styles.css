@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Anton|Work+Sans:200');
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,700');
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+  font-family: 'Anton', sans-serif;
+  font-family: 'Work Sans', sans-serif;
+  /*font-size: 12px;*/
+}
+
+/*kopie von neutral blue color theme {
+  light color: #FCFFF5;
+        color: #D1DBBD;
+        color: #91AA9D;
+        color: #3E606F;
+  dark  color: #193441;
+}*/
+
+/*BREAKPOINTS
+
+smart  -- 320px -- 544px
+tablet -- 545px -- 768px
+laptop -- 769px -- + and up*/
+
+/*---------------- Break Code ----------------*/
+
+body {
+  font-family: 'Work Sans';
+  color: #666666;
+  background: #FCFFF5;
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Work Sans';
+  font-weight: lighter;
+}
+
+p {
+  font-size: 12px;
+}
+
+header {
+  background: #91AA9D;
+  /*padding-left: 100px;*/
+  display: flex;
+  height: 15vh;
+  justify-content: flex-start;
+  padding: 1em;
+}
+
+.site-header {
+
+}
+
+.header-wrapper {
+  padding-left: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.header-wrapper span {
+  font-family: 'Work Sans';
+  font-size: 24px;
+  color: #193441;
+  padding: 0px 10px;
+}
+
+.header-wrapper a {
+  font-family: 'Work Sans';
+  text-decoration: none;
+  font-size: 24px;
+  color: #193441;
+  padding: 0px 10px;
+}
+
+.header-wrapper input {
+  border-style: none;
+  background: none;
+  font-size: 24px;
+}
+
+.site-header img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+  width: 7vw;
+}
+
+.session-row {
+  display: flex;
+  justify-content: center;
+  align-items: space-between;
+  padding-top: 20vh;
+  padding-bottom: 20vh;
+}
+
+.session-row .column:first-child {
+  border-right: 1px solid grey;
+}
+
+.session-row .column {
+  padding: 20px;
+}
+
+form label {
+  display: block;
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 0.5em;
+}
+
+form input[type='submit']{
+  width: inherit;
+}
+
+form .error {
+  color: red;
+}
+
+form .error input, form .error textarea{
+  background-color: red;
+}
+
+.link {
+  border-bottom: 1px solid grey;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.link .details {
+  padding: 1em;
+}
+
+.link .votes {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  flex-basis: 5%;
+  color: #91AA9D;
+  padding: 1em .5em 1em 1.5em;
+}
+
+.link h3 {
+  margin: 0;
+}
+
+.link .votes form button {
+  border: 0;
+  background: none;
+  color: #91AA9D;
+}
+
+footer {
+  height: 15vw;
+  background-color: #193441;
+  padding; 35px;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: white;
+}
+
+.footer-nav a {
+  font-size: 12px;
+  color: white;
+}
+
+.column-footer-main {
+  display: block;
+  /*flex-direction: column;
+  flex-wrap: wrap;*/
+  width: 33.333%;
+  padding: 15px;
+}
+
+.column-footer-contact{
+  display: block;
+  /*flex-direction: column;
+  flex-wrap: wrap;*/
+  width: 33.333%;
+  padding: 15px;
+}
+
+.column-footer-license{
+  display: block;
+  /*flex-direction: column;
+  flex-wrap: wrap;*/
+  width: 33.333%;
+  padding: 15px;
+}
+
+/*---------------- Break Code ----------------*/
+
+@media screen and (min-width: 545px) {}
+
+@media screen and (min-width: 769px) {}

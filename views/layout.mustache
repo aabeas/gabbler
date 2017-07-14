@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gabbler</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="/images/favicon.ico">
+  </head>
+  <body>
+    <header>
+      <div class="site-header">
+        <img src="/images/gab-logo-dk-corner.png">
+
+      {{#user}}
+      <div class="header-wrapper">
+        <span>Gabbler |</span>
+        <span><a href="/links/new">Create a new gab</a></span>
+        <span>| Logged in as {{user.username}} |</span>
+        <span>
+          <form class="" action="/logout" method="post">
+            <input type="submit" name="" value="Sign Out">
+          </form>
+        </span>
+        </span>
+      </div>
+      {{/user}}
+
+      {{^user}}
+      <div class="header-wrapper">
+        <aside>Welcome! <a href="/login">Sign in!</a></aside>
+      </div>
+      {{/user}}
+
+      </div>
+    </header>
+
+    {{{yield}}}
+
+    <footer>
+      <div class="footer-nav">
+      <div class="column-footer-main">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+      </div>
+      <div class="column-footer-contact">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+      </div>
+      <div class="column-footer-license">
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>
+      </div>
+    </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!-- <h1>Logged in as {{user.username}}</h1> -->
+
+{{#links}}
+  <div class="link">
+
+    <div class="votes">
+      <form class="" action="/links/{{_id}}/upvote" method="post">
+        <button type="submit" name="button">
+          <i class="fa fa-plus-square" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <span>{{totalLikes}}</span>
+
+      <form class="" action="/links/{{_id}}/downvote" method="post">
+        <button type="submit" name="button">
+          <i class="fa fa-minus-square" aria-hidden="true"></i>
+        </button>
+      </form>
+
+    </div>
+    <div class="details">
+      <blockquote cite="http://">
+      <h3>{{title}}</h3>
+      <p>{{body}}</p>
+      <small>- {{username}}</small>
+      </blockquote>
+    </div>
+
+  </div>
+{{/links}}

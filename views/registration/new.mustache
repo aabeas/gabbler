@@ -1,0 +1,59 @@
+<div class="session-row">
+  <div class="column">
+
+    {{#error}}
+      Sorry yo, there's an error.
+    {{/error}}
+    <form class="" action="/register" method="post">
+      <div class="{{#error.errors.username}}error{{/error.errors.username}}">
+        <label for="username">Username</label>
+        <input type="text" name="username" value="{{user.username}}">
+        {{#error.errors.username}}
+          <div class="error">
+            Field is required
+          </div>
+        {{/error.errors.username}}
+      </div>
+
+      <div class="{{#error.errors.password}}error{{/error.errors.password}}">
+        <label for="password">Password</label>
+        <input type="password" name="password">
+
+        {{#error.errors.password}}
+          <div class="error">
+            Field is required
+          </div>
+        {{/error.errors.password}}
+      </div>
+
+      <div class="{{#error.errors.email}}error{{/error.errors.email}}">
+        <label for="email">Email</label>
+        <input type="email" name="email"  value="{{user.email}}">
+        {{#error.errors.email}}
+          <div class="error">
+            Field is required
+          </div>
+        {{/error.errors.email}}
+      </div>
+
+      <div class="{{#error.errors.bio}}error{{/error.errors.bio}}">
+        <label for="bio">Your Bio</label>
+        <textarea name="bio">{{user.bio}}</textarea>
+        {{#error.errors.bio}}
+          <div class="error">
+            Field is required
+          </div>
+        {{/error.errors.bio}}
+      </div>
+
+      <div class="">
+        <input type="submit" name="" value="Sign Up!">
+      </div>
+    </form>
+
+  </div>
+
+  <div class="column">
+    Already have an account? <a href="/login">Sign In!</a>
+  </div>
+</div>
