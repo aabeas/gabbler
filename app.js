@@ -8,6 +8,8 @@ const MongoStore = require('connect-mongo')(session);
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const authentication = require("./middleware/authentication")
+const mongoURL = process.env.MONGODB_URI || "mongodb://0.0.0.0:27017/gabbler"
+mongoose.connect(mongoURL)
 const port = process.env.PORT || 3000;
 app.engine('mustache', mustache())
 app.set('view engine', 'mustache')
@@ -18,8 +20,6 @@ app.listen(port)
 app.use(bodyParser.urlencoded({extended: false}))
 mongoose.Promise = require("bluebird");
 // mongoose.connect("mongodb://0.0.0.0:27017/gabbler")
-const mongoURL = process.env.MONGODB_URI || "mongodb://0.0.0.0:27017/gabbler"
-mongoose.connect(mongoURL)
 
 var sess = {
   secret: ']AnC%j8Y:wybVfedxKQA}taR',
